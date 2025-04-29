@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trading Central</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Trading Central</a>
+      <button class="btn btn-outline-light" onclick="showLoginModal()">Logga in</button>
+    </div>
+  </nav>
+
+  <!-- Inloggningsmodal -->
+  <div class="modal" tabindex="-1" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Logga in</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="email" id="email" class="form-control mb-2" placeholder="E-post" />
+          <input type="password" id="password" class="form-control mb-2" placeholder="Lösenord" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Stäng</button>
+          <button type="button" class="btn btn-primary" onclick="login()">Logga in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <section id="market">
+      <h2>Kryptopriser</h2>
+      <div id="crypto-prices" class="p-3 bg-light rounded border">Laddar priser...</div>
+    </section>
+
+    <section id="chart" class="mt-5">
+      <h2>BTC/USDT Graf</h2>
+      <div class="tradingview-widget-container" id="tradingview-chart"></div>
+    </section>
+
+    <section id="portfolio" class="mt-5">
+      <h2>Min Portfölj</h2>
+      <div id="portfolio-list" class="p-3 bg-light rounded border">Inget innehav.</div>
+    </section>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    &copy; 2025 Trading Central
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

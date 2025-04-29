@@ -1,0 +1,22 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+#portfolio-list {
+  min-height: 200px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.modal-content {
+  background-color: #f1f3f6;
+}
